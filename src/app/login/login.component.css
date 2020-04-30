@@ -1,0 +1,12 @@
+.cbody{
+    max-width: 132%  !important;
+    padding-left: 0rem;
+ }
+ .cardbox{
+    background-color: #2c2e30;
+    margin: 36%;
+    margin-top: inherit;
+ }
+ label{
+   color: white;
+ }

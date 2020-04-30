@@ -1,0 +1,45 @@
+<div  class="container col-lg-6 cbody" style="padding-left: 521px;">
+<h3 style="text-align:center !important; margin-left: -155px; padding: 7%;width: 294.8px;">Doctor Registration</h3>
+<div [hidden]="submitted" style="width: 247px;">
+  <form  class="card cardbox " (ngSubmit)="onSubmit()">
+    <div class="card-body" style="margin: 6px;">
+
+    <div class="form-group">
+      <label for="name">Doctor Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="doctor.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Doctor Password</label>
+      <input type="text" class="form-control" id="brand" required [(ngModel)]="doctor.password" name="password">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Doctor PhoneNumber</label>
+        <input type="text" class="form-control" id="brand" required [(ngModel)]="doctor.phoneNum" name="phoneNum">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="madein" required [(ngModel)]="doctor.email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Doctor Date Of Birth</label>
+        <input type="date" class="form-control" id="price" required [(ngModel)]="doctor.dob" name="dob">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Doctor Specialization</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="doctor.specialization" name="specialization">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+    </form>
+</div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

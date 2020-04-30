@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <img [src]="imagePath"/>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="registration" class="nav-link set" routerLinkActive="active">Doctor Registration</a>
+    </li>
+    
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="doclist" class="nav-link set" routerLinkActive="active">Doctors List</a>
+    </li>
+
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="patientlist" class="nav-link set" routerLinkActive="active">Patient List</a>
+    </li>
+
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link set" >Login</a>
+    </li>
+
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link set">Logout</a>
+    </li>
+
+  </ul>
+</nav>
+
+<div class="home">
+<div  class="container">
+  <br>
+  
+  <div >
+    <div class="card-body cardb">
+      
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <span style="color: wheat;">All Rights Reserved 2020 @Medicure</span>
+  </div>
+</footer>

@@ -1,0 +1,45 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 40px;
+    background-color: #0e3159;
+    text-align: center;
+    }
+nav {
+        justify-self: right;
+        background-color: #0e3159 !important ;
+        
+    }
+ a{
+     color: white !important;
+     display: block;
+ }   
+ a:hover{
+     color: rgb(59, 59, 255) !important;
+ }
+ .set{
+    float: right !important ;
+ }
+ .home{
+    height:60em; background-size:cover; width:auto;
+    background-image:url('/assets/images/login.jpg');
+    background-position:50% 50%;
+    background-size: cover;
+ }
+ .box{
+    padding-left: 23.2rem !important;
+    height: fit-content;
+    width: fit-content;
+    background-color: #a7c1de;
+    border-color: black;
+    margin: auto;
+    
+ }
+ .cardb{
+   padding-right:  10.25rem;
+   margin-left: -25%;
+    
+ }
+ 
+ 
