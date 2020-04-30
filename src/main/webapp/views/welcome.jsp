@@ -1,0 +1,260 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicure Consultancy</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<link href="<c:url value="/resources/static/style/bootstrap.min.css" />"
+rel="stylesheet">
+<link href="<c:url value="/resources/static/style/index.css" />"
+rel="stylesheet">
+<link href="<c:url value="/resources/static/style/nav.css" />"
+rel="stylesheet">
+<script src="<c:url value="/resources/static/js/jquery-3.3.0.min.js" />"></script>
+
+<script src="<c:url value="/resources/static/js/bootstrap.min.js" />"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+</style>
+
+<title>Insert title here</title>
+</head>
+
+<body background="<c:url value="/resources/images/login.jpg"/>"/>
+ <div class="fixed-header">
+        <div class="container" style="margin-left: -42px;">
+            <nav>
+              <img src="<c:url value="/resources/static/images/logo-edited.png"/>"  style="margin-left:28px"/>
+           <a href="/">Home</a>
+               <a href="../loginUs/doctor">Doctor</a>
+                <a href="../loginUs/bookapp">Book Appointment</a>
+                
+<a href="../loginUs/logout" class="w3-button w3-white w3-padding-large w3-large w3-margin-top" style="color:black;padding: 8px 10px!important;margin-top: 0px!importantfloat:right;margin-top: -58px;
+    margin-right: -57px;">Logout! <%out.print(request.getSession().getAttribute("user")); %></a>
+                </nav>
+                </div>
+             </div>
+           <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <strong style="font-size:30px;color:green;">MEDICURE</strong>
+  <br><br>
+   <a href="../loginUs/edit">Edit Profile</a>
+  <br><br>
+  <a href="../loginUs/bookapp">Book Appointment</a>
+
+  <br><br>
+  <a href="../loginUs/bookAppList">Check Appointment Status</a>
+  <br><br>
+  
+  <!-- <a href="">Cancel Appointment</a>  -->
+  <br><br>
+  
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<!--  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+
+  <!-- First Photo Grid-->
+  <!-- <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="<c:url value="/resources/static/images/dentist1.jpg"/>" style="width:100%">
+      <h3><b>Keep calm and trust your dentist</b></h3>
+      <!--<p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>-->
+   <!--  </div>
+    <div class="w3-quarter">
+      <img src="<c:url value="/resources/static/images/dentist2.jpg"/>" style="width:100%">
+      <h3><b>Smiles are free but they are worth a lot</b></h3>
+     
+    </div>
+    <div class="w3-quarter">
+      <img src="<c:url value="/resources/static/images/dentist3.jpg"/>" style="width:100%">
+      <h3><b>Life is short ,smile while you still have teeth</b></h3>
+    <!--  <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>-->
+    <!--  <p>What else?</p> -->
+  <!-- </div>
+    <div class="w3-quarter">
+    <img src="<c:url value="/resources/static/images/dentist4.jpg"/>" style="width:100%">
+      <h3><b>Dont rush when you brush</b></h3>
+      
+    </div>
+  </div>
+  </div> -->
+  <!-- Team Section -->
+<div class="w3-container"  id="team">
+  <p class="w3-center w3-large"></p>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="<c:url value="/resources/static/images/doc1.jpg"/>" alt="John" style="width:100%">
+        <div class="w3-container">
+        <br>
+          <center><h3>Dr. Satyendra Singh</h3></center>
+          <center><p class="w3-opacity">Dentist</p></center>
+          <p>Dr. Satyendra Singh is one of the best dentist in the area and has 9 years of experience.
+           He has completed his MBBS from Era Lucknow Medical College, Lucknow and CCDM from
+           Apollo Hospitals. </p>
+           <p><b>ADDRESS: 20,H-Block,Saket,Delhi</b></p>
+            <a href="../login" class="w3-button w3-light-grey w3-block">Book Appointment</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="<c:url value="/resources/static/images/doc2.jpg"/>" alt="Jane" style="width:100%">
+        <div class="w3-container">
+        <br>
+          <center><h3>Dr. Pratik Mishra</h3></center>
+          <center><p class="w3-opacity">Pediatrician</p></center>
+          <p>Dr. Pratik Mishra is a Pediatrician and has a professional experience of 5 years. He completed his MBBS from R.G. Kar Medical
+          College, Kolkata  and PGCC (Diabetes) and HYUY.</p>
+            <p><b>ADDRESS:- 1/20,C-Block,Botanical Garden,Noida</b></p>
+          <a href="../login" class="w3-button w3-light-grey w3-block">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="<c:url value="/resources/static/images/doc3.jpg"/>" alt="Mike" style="width:100%">
+        <div class="w3-container">
+        <br>
+          <center><h3>Dr. Ruby Kansal</h3></center>
+          <center><p class="w3-opacity">Gynacologist</p></center>
+          <p>Dr. Ruby Kansal is a Gynacologist and has a professional experience of 5 years.She completed her MBBS from Kasturba Medical College
+          in 2008 and MD - Gyna from Kasturba Medical College.</p>
+            <p><b>ADDRESS:- 10/1,H-Block,Sector-62,Noida</b></p>
+         <a href="../login" class="w3-button w3-light-grey w3-block">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="<c:url value="/resources/static/images/doc4.jpg"/>" alt="Dan" style="width:100%">
+        <div class="w3-container">
+        <br>
+          <center><h3>Dr. Divya Aggarwal</h3></center>
+          <center><p class="w3-opacity">Dentist</p></center>
+          <p>Dr. Divya Aggarwal is a Dentist and has a professional experience of 12 years. She completed her MBBS from Kasturba Medical College
+          in 2008 and BDS from Kasturba Medical College in 2011. </p>
+            <p><b>ADDRESS:- 1069,H-Block,Niti Khand,Indirapuram</b></p>
+          <a href="../login" class="w3-button w3-light-grey w3-block">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">TOP DEALS AND OFFERS</span>
+    </div>
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <h3>Big Savings</h3>
+      <p>Get unlimited online consultations during the COVID-19 outbreak<br><br></p>
+      <h4>Rs. 799/month</h4>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+     <h3>YOU BELONG.</h3>
+      <p>No dental insurance? 
+      No problem! Our membership plan is a cost-effective way to pay for your annual exams,cleanings,and more!Download our brochure or give us a call.</p>
+   <button>Membership program(PDF)</button>
+    </div>
+
+    <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+      <h3>Wisdom teeth Surgery</h3>
+      <p>100% Medisave coverage
+      <br><br>
+Conservative surgical protocol<br><br></p>
+<button>Book Online</button>
+    </div>
+
+    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+      <h3>Metal Braces
+</h3>
+      <p>Low initial fees<br><br>
+Progressive payment
+
+No surprise fees.</p><br>
+<button>Book Now</button>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  
+    <footer class="w3-row-padding w3-padding-32" style="background-color:black">
+    <div class="w3-third" style="color:white">
+      <h3>MEDICURE</h3>
+      <a href="">Book appointment</a><br>
+      <a href="">About Us</a><br>
+       <a href="">Contact Us</a>
+    </div>
+ 
+    <div class="w3-third" style="color:white">
+      <h3>SOCIAL</h3>
+      <a href="">Facebook</a><br>
+      <a href="">Twitter</a><br>
+       <a href="">Instagram</a>
+      <!-- <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-0">
+          <!-- <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px"> -->
+          <!-- <span class="w3-large" style="color:white">Twitter</span><br>
+         
+        </li>
+        <li class="w3-padding-0">
+          <!--<img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px"> -->
+          <!-- <span class="w3-large" style="color:white">Facebook</span><br>
+       
+        </li>
+      </ul> -->
+    </div>
+
+    <div class="w3-third w3-serif" style="color:white">
+      <h3>Contact Us</h3>
+      <a href="">Ph no: 7985855652</a>
+      <br>
+      <a href="">Ph no: 9450216745</a>
+     
+    </div>
+  </footer>
+<!-- End page content -->
+</body>
+</html>
+
+
+
+
+
